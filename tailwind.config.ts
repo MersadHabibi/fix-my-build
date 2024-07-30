@@ -8,6 +8,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "1.5rem",
+      },
+      screens: {
+        "2xl": "1440px",
+        xl: "1280px",
+        lg: "1024px",
+        md: "768px",
+        sm: "640px",
+        xs: "480px",
+      },
+      colors: {
+        "body-color": "#4F4F4F",
+        "orange-bg-font-color": "#EE5719",
+        "blue-font-color": "#061A48",
+        "white-font-color": "#FFFFFF",
+        "gray-font-color": "#6D717A",
+        "orange-gray": "#ECE7DB",
+        "red-color": "#DB0C0C",
+        "login-input-font": "#656A92",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -16,22 +38,5 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          "body-color": "#4F4F4F",
-          "orange-bg-font-color": "#EE5719",
-          "blue-font-color": "#061A48",
-          "white-font-color": "#FFFFFF",
-          "gray-font-color": "#6D717A",
-          "gray-font-color": "#6D717A",
-          "orange-gray": "#6D717A",
-          "red-color": "#6D717A",
-          "login-input-font": "#6D717A",
-        },
-      },
-    ],
-  },
 };
 export default config;
