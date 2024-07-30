@@ -14,14 +14,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
         className={cn(
-          "text-blue-font-color min-h-dvh !bg-white bg-gradient-conic font-medium",
+          "text-blue-font-color h-dvh w-screen overflow-x-hidden !bg-white bg-gradient-conic text-center font-medium lg:text-left",
           FRoboto.className,
         )}>
-        <Navbar />
-        {children}
+        <div className="relative grid h-full gap-y-0">
+          <Navbar />
+          <main className="my-auto h-full">{children}</main>
+          <div></div>
+        </div>
       </body>
     </html>
   );
