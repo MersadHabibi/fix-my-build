@@ -1,0 +1,5 @@
+export enum ROLE {
+  ADMIN,
+  CUSTOMER,
+  TRADES_PERSON
+}

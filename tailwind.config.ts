@@ -20,6 +20,9 @@ const config: Config = {
         sm: "640px",
         xs: "480px",
       },
+      boxShadow: {
+        primary: "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
       colors: {
         "body-color": "#4F4F4F",
         "orange-bg-font-color": "#EE5719",
