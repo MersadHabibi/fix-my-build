@@ -1,6 +1,5 @@
 import Logo from "@/components/modules/Logo";
 import CloseBtn from "@/components/templates/auth/CloseBtn";
-import { XIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function AuthLayout({

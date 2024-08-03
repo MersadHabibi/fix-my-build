@@ -41,19 +41,5 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: [
-      {
-        "body-color": "#4F4F4F",
-        "orange-bg-font-color": "#EE5719",
-        "blue-font-color": "#061A48",
-        "white-font-color": "#FFFFFF",
-        "gray-font-color": "#6D717A",
-        "orange-gray": "#ECE7DB",
-        "red-color": "#DB0C0C",
-        "login-input-font": "#656A92",
-      },
-    ],
-  },
 };
 export default config;

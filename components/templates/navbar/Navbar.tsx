@@ -1,10 +1,8 @@
-import Avatar from "@/components/modules/Avatar";
-import { ChevronDownIcon, MessageSquareTextIcon, UserIcon } from "lucide-react";
-import Image from "next/image";
+import Logo from "@/components/modules/Logo";
+import { MessageSquareTextIcon, UserIcon } from "lucide-react";
 import Link from "next/link";
 import NavbarNotification from "./NavbarNotification";
 import NavbarProfile from "./NavbarProfile";
-import Logo from "@/components/modules/Logo";
 
 const IS_LOGIN = false;
 
