@@ -13,7 +13,7 @@ export default function AuthLayout({
         <div className="w-fit lg:h-11 xl:h-12">
           <Logo className="size-full object-contain" width={300} height={40} />
         </div>
-        <div className="mx-auto w-[400px] pb-14 pt-10 xl:w-[450px] xl:pb-20 xl:pt-16">
+        <div className="mx-auto w-[400px] pb-14 pt-10 xl:w-[450px] xl:pb-16 xl:pt-14">
           <Image
             className="size-full object-contain"
             src={"/svg/auth.svg"}

@@ -1,5 +1,7 @@
 import { FRoboto } from "@/config/fonts";
 import { cn } from "@/lib/utils";
+import { Bounce, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
 export default function RootLayout({
@@ -15,6 +17,19 @@ export default function RootLayout({
           FRoboto.className,
         )}>
         {children}
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Bounce}
+        />
       </body>
     </html>
   );

@@ -9,6 +9,8 @@ export default function Input({
   error,
   valueAsNumber,
   className,
+  value,
+  onInput,
 }: {
   type?: string;
   placeholder: string;
@@ -17,6 +19,8 @@ export default function Input({
   error?: FieldError | undefined;
   valueAsNumber?: boolean;
   className?: string;
+  value?: string;
+  onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
 }) {
   if (register) {
     return (
@@ -25,7 +29,7 @@ export default function Input({
           type={type || "text"}
           placeholder={placeholder}
           className={cn(
-            "input w-full rounded-none border-x-0 !border-b border-t-0 border-gray-font-color px-0 font-medium !text-gray-font-color !outline-none placeholder:text-gray-font-color focus:border-body-color focus:!text-body-color focus:placeholder:!text-body-color",
+            "input w-full rounded-none border-x-0 !border-b border-t-0 border-gray-font-color bg-transparent px-0 font-medium !text-gray-font-color !outline-none placeholder:text-gray-font-color focus:border-body-color focus:!text-body-color focus:placeholder:!text-body-color",
             className,
             error && "!border-red-500",
           )}
@@ -41,13 +45,21 @@ export default function Input({
   }
 
   return (
-    <input
-      type={type || "text"}
-      placeholder={placeholder}
-      className={cn(
-        "input w-full rounded-none border-x-0 !border-b border-t-0 border-gray-font-color px-0 font-medium !text-gray-font-color !outline-none placeholder:text-gray-font-color focus:border-body-color focus:!text-body-color focus:placeholder:!text-body-color",
-        className,
-      )}
-    />
+    <div>
+      <input
+        type={type || "text"}
+        placeholder={placeholder}
+        className={cn(
+          "input w-full rounded-none border-x-0 !border-b border-t-0 border-gray-font-color bg-transparent px-0 font-medium !text-gray-font-color !outline-none placeholder:text-gray-font-color focus:border-body-color focus:!text-body-color focus:placeholder:!text-body-color",
+          className,
+          error && "!border-red-500",
+        )}
+        value={value}
+        onInput={(event) => onInput && onInput(event)}
+      />
+      {error ? (
+        <p className="pt-1 text-start text-xs text-red-500">{error?.message}</p>
+      ) : null}
+    </div>
   );
 }

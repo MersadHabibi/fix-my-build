@@ -6,6 +6,7 @@ import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FormData, UserSchema } from "./LoginFormData";
+import Link from "next/link";
 
 export default function LoginForm() {
   const {
@@ -69,8 +70,13 @@ export default function LoginForm() {
         </label>
       </div>
       <button className="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-blue-font-color text-xl font-normal text-white transition hover:bg-orange-bg-font-color">
-        Register
+        Sign in
       </button>
+      <Link
+        className="mt-2 block text-center font-bold text-orange-bg-font-color sm:text-lg"
+        href={"/auth/forget-password"}>
+        Forgot password?
+      </Link>
     </form>
   );
 }
