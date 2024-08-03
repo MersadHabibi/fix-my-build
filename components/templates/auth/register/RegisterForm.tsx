@@ -49,14 +49,14 @@ export default function RegisterForm() {
           />
           {isShowInput.password ? (
             <EyeIcon
-              className="absolute bottom-0 right-0 top-0 my-auto size-6 cursor-pointer text-gray-font-color"
+              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
               onClick={() =>
                 setIsShowInput((prev) => ({ ...prev, password: false }))
               }
             />
           ) : (
             <EyeOffIcon
-              className="absolute bottom-0 right-0 top-0 my-auto size-6 cursor-pointer text-gray-font-color"
+              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
               onClick={() =>
                 setIsShowInput((prev) => ({ ...prev, password: true }))
               }
@@ -74,14 +74,14 @@ export default function RegisterForm() {
 
           {isShowInput.confirmPassword ? (
             <EyeIcon
-              className="absolute bottom-0 right-0 top-0 my-auto size-6 cursor-pointer text-gray-font-color"
+              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
               onClick={() =>
                 setIsShowInput((prev) => ({ ...prev, confirmPassword: false }))
               }
             />
           ) : (
             <EyeOffIcon
-              className="absolute bottom-0 right-0 top-0 my-auto size-6 cursor-pointer text-gray-font-color"
+              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
               onClick={() =>
                 setIsShowInput((prev) => ({ ...prev, confirmPassword: true }))
               }
@@ -89,6 +89,7 @@ export default function RegisterForm() {
           )}
         </div>
         <Input
+          type="email"
           placeholder="Email"
           name="email"
           register={register}

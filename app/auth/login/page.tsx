@@ -1,32 +1,32 @@
-import RegisterForm from "@/components/templates/auth/register/RegisterForm";
+import LoginForm from "@/components/templates/auth/login/LoginForm";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Register | Fix My Build",
+  title: "Login | Fix My Build",
 };
 
-export default function RegisterPage() {
+export default function LoginPage() {
   return (
     <div className="mx-auto w-full max-w-[550px] lg:max-w-none xl:px-10 2xl:px-20">
       <div className="py-8 text-center sm:py-12">
         <h1 className="mb-1 text-3xl font-bold sm:mb-3 sm:text-[40px]">
-          CREATE AN ACCOUNT
+          SIGN IN
         </h1>
         <p className="font-normal sm:text-xl">
-          <span>Already have an account? </span>
+          <span>Not a member? </span>
           <Link
             className="font-bold text-orange-bg-font-color"
-            href={"/auth/login"}>
-            Sign in
+            href={"/auth/register"}>
+            Register now!
           </Link>
         </p>
       </div>
-      <RegisterForm />
+      <LoginForm />
       <div className="py-8 text-center sm:py-14">
         <p className="text-lg font-bold text-black sm:text-xl">
-          Or register with
+          Or sign in with
         </p>
         <div className="flex items-center justify-center gap-x-7 pt-3 sm:gap-x-10 sm:pt-5">
           <Link

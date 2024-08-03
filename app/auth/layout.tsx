@@ -10,7 +10,7 @@ export default function AuthLayout({
   return (
     <div className="relative grid h-dvh items-stretch lg:grid-cols-2">
       <div className="hidden h-full w-full flex-col justify-between bg-[#BFBAB2] px-12 py-10 lg:flex">
-        <div className="h-7 w-fit lg:h-11 xl:h-12">
+        <div className="w-fit lg:h-11 xl:h-12">
           <Logo className="size-full object-contain" width={300} height={40} />
         </div>
         <div className="mx-auto w-[400px] pb-14 pt-10 xl:w-[450px] xl:pb-20 xl:pt-16">
@@ -18,8 +18,8 @@ export default function AuthLayout({
             className="size-full object-contain"
             src={"/svg/auth.svg"}
             alt="Auth image"
-            width={400}
-            height={500}
+            width={500}
+            height={600}
           />
         </div>
         <div>
@@ -35,7 +35,14 @@ export default function AuthLayout({
         </div>
       </div>
       <div className="flex h-full w-full flex-col justify-between px-7 py-7 sm:px-12 sm:py-10">
-        <CloseBtn />
+        <div className="flex items-center justify-between">
+          <Logo
+            className="h-6 w-fit sm:h-7 lg:hidden"
+            width={300}
+            height={40}
+          />
+          <CloseBtn />
+        </div>
         {children}
         <div className="pt-5 text-center">
           <p className="text-xs font-bold text-zinc-600">
