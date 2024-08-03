@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import NavbarNotification from "./NavbarNotification";
 import NavbarProfile from "./NavbarProfile";
+import Logo from "@/components/modules/Logo";
 
-const IS_LOGIN = true;
+const IS_LOGIN = false;
 
 export default function Navbar() {
   return (
@@ -22,13 +23,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="h-7 sm:h-10 lg:w-full">
-          <Image
-            className="size-full object-contain"
-            src={"/svg/logo.svg"}
-            alt="Logo"
-            width={300}
-            height={40}
-          />
+          <Logo className="size-full object-contain" width={300} height={40} />
         </div>
         {IS_LOGIN ? (
           <div className="flex items-center justify-end gap-x-4 sm:gap-x-5 lg:w-full">
