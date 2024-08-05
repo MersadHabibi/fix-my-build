@@ -1,7 +1,9 @@
 "use client";
 
 import Input from "@/components/modules/Input";
+import { emailRegex } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -9,20 +11,28 @@ export default function ForgetPasswordForm() {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  const onSendEmail = () => {
-    const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g);
+  const router = useRouter();
 
+  const onSendEmail = () => {
     const isTrueEmail = emailRegex.test(email);
 
     if (!isTrueEmail) {
       return toast.error("Email is incorrect");
     }
+
+    localStorage.setItem("forget-password-email", email);
+
+    router.push(`/auth/reset-password-verification?email=${email}`);
   };
 
   const onSendMessage = () => {
-    if (phoneNumber.length < 10 || phoneNumber.length > 12) {
+    if (phoneNumber.length !== 11) {
       return toast.error("Phone number is incorrect");
     }
+
+    localStorage.setItem("forget-password-phone-number", phoneNumber);
+
+    router.push(`/auth/reset-password-verification?phoneNumber=${phoneNumber}`);
   };
 
   return (
