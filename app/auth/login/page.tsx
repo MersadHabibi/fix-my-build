@@ -11,7 +11,7 @@ export default function LoginPage() {
   return (
     <div className="mx-auto w-full max-w-[550px] py-8 lg:max-w-none xl:px-10 2xl:px-20">
       <div className="py-8 text-center sm:py-12">
-        <h1 className="mb-1 text-3xl font-bold sm:mb-3 sm:text-[40px]">
+        <h1 className="mb-1 text-2xl font-bold min-[390px]:text-3xl sm:mb-3 sm:text-[40px]">
           SIGN IN
         </h1>
         <p className="font-normal sm:text-xl">

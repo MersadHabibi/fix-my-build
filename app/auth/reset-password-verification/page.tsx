@@ -35,7 +35,7 @@ export default function ResetPasswordVerificationPage({
 
   return (
     <div className="mx-auto w-full max-w-[550px] py-8 lg:max-w-[550px]">
-      <h1 className="mb-10 text-start text-3xl font-bold sm:mb-7 sm:text-[40px]">
+      <h1 className="mb-10 text-start text-2xl font-bold min-[390px]:text-3xl sm:mb-7 sm:text-[40px]">
         {searchParams.email ? "EMAIL VERIFICATION" : "SMS VERIFICATION"}
       </h1>
       {searchParams.email ? (

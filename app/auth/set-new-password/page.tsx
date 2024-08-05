@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function SetNewPasswordPage() {
   return (
     <div className="mx-auto w-full max-w-[550px] py-8 lg:max-w-[550px]">
-      <h1 className="mb-10 text-start text-3xl font-bold sm:mb-10 sm:text-[40px]">
+      <h1 className="mb-10 text-start text-2xl font-bold min-[390px]:text-3xl sm:mb-10 sm:text-[40px]">
         SET NEW PASSWORD
       </h1>
       <SetNewPasswordForm />
