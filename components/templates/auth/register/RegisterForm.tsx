@@ -39,55 +39,22 @@ export default function RegisterForm() {
           register={register}
           error={errors.fullName}
         />
-        <div className="relative">
-          <Input
-            type={isShowInput.password ? "text" : "password"}
-            placeholder="Password*"
-            name="password"
-            register={register}
-            error={errors.password}
-          />
-          {isShowInput.password ? (
-            <EyeIcon
-              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
-              onClick={() =>
-                setIsShowInput((prev) => ({ ...prev, password: false }))
-              }
-            />
-          ) : (
-            <EyeOffIcon
-              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
-              onClick={() =>
-                setIsShowInput((prev) => ({ ...prev, password: true }))
-              }
-            />
-          )}
-        </div>
-        <div className="relative">
-          <Input
-            type={isShowInput.confirmPassword ? "text" : "password"}
-            placeholder="Confirm Password*"
-            name="confirmPassword"
-            register={register}
-            error={errors.confirmPassword}
-          />
-
-          {isShowInput.confirmPassword ? (
-            <EyeIcon
-              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
-              onClick={() =>
-                setIsShowInput((prev) => ({ ...prev, confirmPassword: false }))
-              }
-            />
-          ) : (
-            <EyeOffIcon
-              className="absolute right-0 top-3 size-6 cursor-pointer text-gray-font-color"
-              onClick={() =>
-                setIsShowInput((prev) => ({ ...prev, confirmPassword: true }))
-              }
-            />
-          )}
-        </div>
+        <Input
+          type={"password"}
+          placeholder="Password*"
+          name="password"
+          register={register}
+          error={errors.password}
+          hasHideShowBtn
+        />
+        <Input
+          type={"password"}
+          placeholder="Confirm Password*"
+          name="confirmPassword"
+          register={register}
+          error={errors.confirmPassword}
+          hasHideShowBtn
+        />
         <Input
           type="email"
           placeholder="Email"

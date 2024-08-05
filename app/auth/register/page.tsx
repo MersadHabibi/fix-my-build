@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RegisterPage() {
   return (
-    <div className="mx-auto w-full max-w-[550px] lg:max-w-none xl:px-10 2xl:px-20">
+    <div className="mx-auto w-full max-w-[550px] py-8 lg:max-w-none xl:px-10 2xl:px-20">
       <div className="py-8 text-center sm:py-12">
         <h1 className="mb-1 text-3xl font-bold sm:mb-3 sm:text-[40px]">
           CREATE AN ACCOUNT

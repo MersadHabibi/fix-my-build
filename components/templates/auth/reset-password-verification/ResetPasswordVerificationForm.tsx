@@ -17,7 +17,7 @@ export default function ResetPasswordVerificationForm() {
   };
 
   return (
-    <form className="text-start">
+    <div className="text-start">
       <VerificationInput
         onChange={(value) => {
           setCode(value);
@@ -34,9 +34,9 @@ export default function ResetPasswordVerificationForm() {
       <button
         onClick={onSubmit}
         disabled={code.length < 6}
-        className="mt-12 flex h-12 w-full items-center justify-center rounded-full bg-blue-font-color text-xl font-normal text-white transition hover:bg-orange-bg-font-color disabled:opacity-75 disabled:hover:bg-blue-font-color">
+        className="mt-12 flex h-12 w-full items-center justify-center rounded-full bg-blue-font-color text-lg font-normal text-white transition hover:bg-orange-bg-font-color disabled:opacity-75 disabled:hover:bg-blue-font-color sm:text-xl">
         Continue
       </button>
-    </form>
+    </div>
   );
 }

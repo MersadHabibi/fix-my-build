@@ -4,8 +4,8 @@ export const UserSchema: ZodType<FormData> = z.object({
   email: z.string().email(),
   password: z
     .string()
-    .min(6, { message: "Password is too short" })
-    .max(20, { message: "Password is too long" }),
+    .min(8, { message: "Password is too short" })
+    .max(32, { message: "Password is too long" }),
 });
 
 export type FormData = {
