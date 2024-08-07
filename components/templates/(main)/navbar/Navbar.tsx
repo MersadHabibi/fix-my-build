@@ -3,6 +3,7 @@ import { MessageSquareTextIcon, UserIcon } from "lucide-react";
 import Link from "next/link";
 import NavbarNotification from "./NavbarNotification";
 import NavbarProfile from "./NavbarProfile";
+import NavLink from "@/components/modules/NavLink";
 
 const IS_LOGIN = true;
 
@@ -11,14 +12,16 @@ export default function Navbar() {
     <div className="h-fit w-full shrink-0 border-b bg-white">
       <nav className="container flex w-full items-center justify-between py-4 text-base sm:text-xl">
         <div className="hidden w-full items-center gap-x-8 lg:flex">
-          <Link href={"/about-us"} className="hover:text-orange-bg-font-color">
+          <NavLink
+            href={"/about-us"}
+            className="hover:text-orange-bg-font-color [&.active]:text-orange-bg-font-color">
             About us
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             href={"/contact-us"}
-            className="hover:text-orange-bg-font-color">
+            className="hover:text-orange-bg-font-color [&.active]:text-orange-bg-font-color">
             Contact us
-          </Link>
+          </NavLink>
         </div>
         <div className="h-7 sm:h-10 lg:w-full">
           <Logo className="size-full object-contain" width={300} height={40} />
