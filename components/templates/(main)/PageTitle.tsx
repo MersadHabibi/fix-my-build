@@ -67,6 +67,21 @@ const titles: TTitles = [
       },
     ],
   },
+  {
+    url: "/privacy-policy",
+    title: "PRIVACY POLICY",
+    breadCrumb: [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: "Privacy policy",
+        url: "/privacy-policy",
+        lastUrl: true,
+      },
+    ],
+  },
 ];
 
 export default function PageTitle() {
