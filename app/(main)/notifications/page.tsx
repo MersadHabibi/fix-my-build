@@ -1,5 +1,10 @@
 import NotificationItem from "@/components/modules/NotificationItem";
 import { fakeNotifications } from "@/data/fakeNotifications";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Notification | Fix My Build",
+};
 
 export default function page() {
   return (

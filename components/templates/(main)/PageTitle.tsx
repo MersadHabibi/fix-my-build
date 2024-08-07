@@ -37,6 +37,21 @@ const titles: TTitles = [
       },
     ],
   },
+  {
+    url: "/contact-us",
+    title: "CONTACT US",
+    breadCrumb: [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: "Contact us",
+        url: "/contact-us",
+        lastUrl: true,
+      },
+    ],
+  },
 ];
 
 export default function PageTitle() {

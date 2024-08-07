@@ -11,7 +11,7 @@ export default function RootLayout({
     <div className="grid h-full bg-neutral-100">
       <div className="relative flex h-full flex-col justify-between gap-y-0">
         <Navbar />
-        <main className="flex h-full flex-col justify-center">
+        <main className="flex h-full flex-col justify-center bg-neutral-100">
           <PageTitle />
           {children}
         </main>
