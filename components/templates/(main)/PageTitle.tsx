@@ -52,12 +52,25 @@ const titles: TTitles = [
       },
     ],
   },
+  {
+    url: "/about-us",
+    title: "ABOUT US",
+    breadCrumb: [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: "About us",
+        url: "/about-us",
+        lastUrl: true,
+      },
+    ],
+  },
 ];
 
 export default function PageTitle() {
   const pathname = usePathname();
-
-  console.log(pathname);
 
   const thisUrlTitle = titles.find((item) => item.url === pathname);
 

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Contact Us | Fix My Build",
 };
 
-export default function page() {
+export default function ContactUsPage() {
   return (
     <div className="container h-full space-y-8 pb-20 text-start sm:space-y-14">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-x-20 gap-y-5 rounded-lg bg-orange-gray px-5 py-7 sm:p-12 lg:flex-row">
@@ -14,8 +14,8 @@ export default function page() {
             className="w-full object-cover"
             src={"/svg/contact-us.svg"}
             alt="contact-us-image"
-            width={500}
-            height={500}
+            width={400}
+            height={400}
           />
         </div>
         <div>
@@ -35,7 +35,7 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-x-20 gap-y-8 rounded-lg bg-blue-font-color px-5 py-5 sm:px-12 sm:py-7 lg:flex-row">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-x-20 gap-y-8 rounded-lg bg-blue-font-color p-5 sm:px-12 sm:py-7 lg:flex-row">
         <div className="w-full">
           <p className="text-2xl font-bold text-neutral-200">
             Our company address is

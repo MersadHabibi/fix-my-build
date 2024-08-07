@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Home | Fix My Build",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="grid h-full">
       <div className="relative flex h-full flex-col justify-between gap-y-0">

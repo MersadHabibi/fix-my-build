@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Notification | Fix My Build",
 };
 
-export default function page() {
+export default function NotificationsPage() {
   return (
     <div className="container h-full text-start">
       <div className="mx-auto max-w-5xl rounded-lg bg-white px-5 py-7 sm:p-12">
