@@ -28,7 +28,7 @@ const titles: TTitles = [
     breadCrumb: [
       {
         title: "Home",
-        url: "/home",
+        url: "/",
       },
       {
         title: "Notifications",
@@ -50,18 +50,19 @@ export default function PageTitle() {
 
   return (
     <div className="py-10">
-      <h1 className="text-center text-[40px] font-bold">
+      <h1 className="line-clamp-1 text-center text-2xl font-bold sm:text-[40px]/[50px]">
         {thisUrlTitle.title}
       </h1>
       <div className="flex w-full justify-center">
-        <div className="breadcrumbs mx-auto py-0 text-xl">
+        <div className="breadcrumbs mx-auto py-0 sm:text-xl">
           <ul>
-            {thisUrlTitle.breadCrumb.map((item) => (
+            {thisUrlTitle.breadCrumb.map((item, index) => (
               <li
                 key={item.title}
                 className={cn(
                   "text-orange-bg-font-color before:!h-2 before:!w-2 before:!border-r-2 before:!border-t-2 before:text-gray-font-color before:!opacity-100",
                   item.lastUrl && "text-gray-font-color",
+                  index === 0 && "before:!w-0",
                 )}>
                 {item.lastUrl ? (
                   <p>{item.title}</p>

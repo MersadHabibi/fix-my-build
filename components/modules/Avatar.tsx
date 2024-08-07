@@ -8,8 +8,12 @@ export default function Avatar({
   className: string;
 }) {
   return (
-    <div className="avatar">
-      <div className={cn("w-10 rounded-full", className)}>{children}</div>
+    <div
+      className={cn(
+        "flex w-10 shrink-0 items-center justify-center overflow-hidden rounded-full",
+        className,
+      )}>
+      {children}
     </div>
   );
 }

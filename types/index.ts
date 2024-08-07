@@ -4,7 +4,9 @@ export type TNotification = {
   id: string;
   User: TUser;
   createdAt: Date;
-  body: string;
+  title: string;
+  body?: string;
+  link: string;
 };
 
 export type TUser = {

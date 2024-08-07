@@ -4,11 +4,11 @@ import Link from "next/link";
 import NavbarNotification from "./NavbarNotification";
 import NavbarProfile from "./NavbarProfile";
 
-const IS_LOGIN = false;
+const IS_LOGIN = true;
 
 export default function Navbar() {
   return (
-    <div className="h-fit w-full shrink-0 border-b">
+    <div className="h-fit w-full shrink-0 border-b bg-white">
       <nav className="container flex w-full items-center justify-between py-4 text-base sm:text-xl">
         <div className="hidden w-full items-center gap-x-8 lg:flex">
           <Link href={"/about-us"} className="hover:text-orange-bg-font-color">
@@ -27,7 +27,7 @@ export default function Navbar() {
           <div className="flex items-center justify-end gap-x-4 sm:gap-x-5 lg:w-full">
             <Link href={"/messages"} className="h-6 pt-0.5 sm:h-8">
               <button className="indicator">
-                <span className="indicator-item -right-1 -top-1.5 flex size-4 items-center justify-center rounded-full bg-orange-bg-font-color text-[9px] text-white-font-color sm:-right-1.5 sm:-top-2 sm:size-5 sm:text-xs">
+                <span className="indicator-item right-0.5 top-px flex size-4 items-center justify-center rounded-full bg-orange-bg-font-color text-[9px] text-white-font-color sm:size-5 sm:text-xs">
                   1
                 </span>
                 <MessageSquareTextIcon className="size-6 sm:size-8" />

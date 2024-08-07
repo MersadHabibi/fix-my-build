@@ -6,12 +6,15 @@ export const fakeNotifications: TNotification[] = [
     id: "1",
     createdAt: new Date(),
     User: fakeUsers[0],
-    body: "Jenny Wilson has approved your project",
+    title: "Jenny Wilson has approved your project",
+    link: "#",
   },
   {
     id: "2",
     createdAt: new Date(),
     User: fakeUsers[1],
-    body: "Estimates received",
+    title: "Estimates received",
+    body: "Notes from reviewer:  Please could you include a photo of the existing lock to be replaced.",
+    link: "#",
   },
 ];

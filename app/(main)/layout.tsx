@@ -8,13 +8,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative grid h-full gap-y-0">
-      <Navbar />
-      <main className="my-auto h-full">
-        <PageTitle />
-        {children}
-      </main>
-      <Footer />
+    <div className="grid h-full bg-neutral-100">
+      <div className="relative flex h-full flex-col justify-between gap-y-0">
+        <Navbar />
+        <main className="flex h-full flex-col justify-center">
+          <PageTitle />
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
