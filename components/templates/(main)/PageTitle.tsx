@@ -82,6 +82,21 @@ const titles: TTitles = [
       },
     ],
   },
+  {
+    url: "/terms",
+    title: "Terms & Conditions",
+    breadCrumb: [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: "Terms",
+        url: "/terms",
+        lastUrl: true,
+      },
+    ],
+  },
 ];
 
 export default function PageTitle() {

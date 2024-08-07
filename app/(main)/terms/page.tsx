@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Fix My Build",
 };
 
-export default function PrivacyPolicyPage() {
+export default function TermsPage() {
   return (
     <div className="container h-full pb-20 text-start sm:space-y-14">
       <div className="mx-auto max-w-5xl rounded-lg bg-white px-5 py-7 sm:p-12">
